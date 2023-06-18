@@ -1,0 +1,29 @@
+CREATE DATABASE `jublia` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+
+-- jublia.email_master definition
+
+CREATE TABLE `email_master` (
+  `uuid` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+-- jublia.event_master definition
+
+CREATE TABLE `event_master` (
+  `uuid` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+-- jublia.send_email definition
+
+CREATE TABLE `send_email` (
+  `uuid` varchar(100) NOT NULL,
+  `uuid_user` varchar(100) NOT NULL,
+  `uuid_event` varchar(100) NOT NULL,
+  `email_subject` varchar(100) DEFAULT NULL,
+  `email_content` text DEFAULT NULL,
+  `timesend` datetime DEFAULT NULL,
+  `status` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+{% include 'head.html' %}
+<body>
+
+<h2>List Event</h2>
+
+<table>
+  <tr>
+    <th>UUID</th>
+    <th>Name</th>
+  </tr>
+  {% for row in data %}
+  <tr>
+    <td>{{row.uuid}}</td>
+    <td>{{row.name}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>

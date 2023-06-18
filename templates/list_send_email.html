@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{% include 'head.html' %}
+<body>
+
+<h2>List Sending Email</h2>
+
+<table>
+  <tr>
+    <th>UUID</th>
+    <th>User</th>
+    <th>Event</th>
+    <th>Time</th>
+    <th>Status</th>
+  </tr>
+  {% for row in data %}
+  <tr>
+    <td>{{row.uuid}}</td>
+    <td>{{row.useremail}}</td>
+    <td>{{row.event}}</td>
+    <td>{{row.timesend}}</td>
+    <td>{{row.status}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>

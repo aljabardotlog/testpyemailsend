@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+{% include 'head.html' %}
+<body>
+
+<h2>List Email</h2>
+
+<table>
+  <tr>
+    <th>UUID</th>
+    <th>Email</th>
+  </tr>
+  {% for row in data %}
+  <tr>
+    <td>{{row.uuid}}</td>
+    <td>{{row.email}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
